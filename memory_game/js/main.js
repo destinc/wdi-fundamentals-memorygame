@@ -32,18 +32,16 @@ function checkForMatch () {
 	}
 }
 
-function flipCard(cardId){
+var flipCard = function(cardId){
+	console.log("user flipped" + cards[cardId].rank);
 	cardsInPlay.push(cards[cardId].rank);
 if (cardsInPlay.length === 2) {
 	checkForMatch();
-	
+	console.log(cards[cardId].cardImage);
+	console.log(cards[cardId].suit);
 	}
 };
 
-console.log(cardsInPlay);
-
 flipCard(0)
 flipCard(1)
-	console.log('User flipped' + cards[cardId],rank);
-	console.log(this.cardImage);
-	console.log(this.suit);
+ 
